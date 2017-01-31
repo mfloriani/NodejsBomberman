@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="16" tilewidth="32" tileheight="32" nextobjectid="13">
+ <tileset firstgid="1" name="gridtiles" tilewidth="32" tileheight="32" tilecount="140" columns="14">
+  <image source="gridtiles.png" width="448" height="320"/>
+ </tileset>
+ <objectgroup name="objects1">
+  <object id="1" name="hEnemy" x="159.667" y="351" width="32" height="32">
+   <ellipse/>
+  </object>
+  <object id="2" name="hEnemy" x="416" y="350" width="32" height="32">
+   <ellipse/>
+  </object>
+  <object id="3" name="hEnemy" x="513" y="287" width="32" height="32">
+   <ellipse/>
+  </object>
+  <object id="4" name="hEnemy" x="320" y="223" width="32" height="32">
+   <ellipse/>
+  </object>
+  <object id="6" name="hEnemy" x="96" y="478" width="32" height="32">
+   <ellipse/>
+  </object>
+  <object id="10" name="hEnemy" x="33" y="288" width="32" height="32">
+   <ellipse/>
+  </object>
+  <object id="11" name="hEnemy" x="543" y="415" width="32" height="32">
+   <ellipse/>
+  </object>
+  <object id="12" name="hEnemy" x="545" y="159" width="32" height="32">
+   <ellipse/>
+  </object>
+ </objectgroup>
+ <layer name="layer1" width="20" height="16">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,
+6,71,71,9,9,9,9,9,9,9,9,9,9,9,9,9,9,71,71,6,
+6,71,12,9,12,9,12,71,12,71,12,71,12,71,12,71,12,71,12,6,
+6,71,9,9,71,9,71,9,9,9,9,9,9,9,9,9,71,71,71,6,
+6,71,12,71,12,9,12,71,12,71,12,71,12,71,12,9,12,71,12,6,
+6,71,9,9,9,9,71,71,71,71,71,71,71,71,71,9,71,71,71,6,
+6,71,12,71,12,71,12,71,12,71,12,71,12,71,12,9,12,71,12,6,
+6,71,71,71,71,71,9,9,9,9,9,9,9,9,9,9,71,71,71,6,
+6,71,12,71,12,71,12,9,12,9,12,71,12,71,12,9,12,71,12,6,
+6,71,71,71,71,71,71,9,71,9,71,71,71,71,71,9,9,9,9,6,
+6,9,12,71,12,71,12,9,12,9,12,71,12,71,12,9,12,71,12,6,
+6,9,9,9,71,71,71,9,71,9,71,71,71,71,71,9,71,71,71,6,
+6,71,12,71,12,71,12,9,12,9,12,71,12,71,12,9,12,71,12,6,
+6,71,71,71,71,71,9,9,9,9,9,9,9,9,9,9,9,71,71,6,
+6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6
+</data>
+ </layer>
+</map>
