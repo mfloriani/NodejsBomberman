@@ -18,12 +18,12 @@ Bomberman.MainMenu.prototype = {
         var t = this.game.add.text(this.game.width / 2, 100, text, style);
         t.anchor.set(0.5);
         
-        var text = "Clique para jogar";
+        var text = "Click to play";
         var style = { font: "30px Arial", fill: "#fff", align: "center" };
         var t = this.game.add.text(this.game.width / 2, this.game.height / 2, text, style);
         t.anchor.set(0.5);
         
-        var text = "SETAS do teclado movimentam e BARRA ESPAÇO lança a bomba";
+        var text = "Keyboard ARROWS to move and SPACEBAR to release the bomb";
         var style = { font: "15px Arial", fill: "#fff", align: "center" };
         var t = this.game.add.text(this.game.width / 2, this.game.height -100, text, style);
         t.anchor.set(0.5);

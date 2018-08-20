@@ -26,7 +26,6 @@ Bomberman.Game = function () { };
 
 Bomberman.Game.prototype = {
     create: function () {
-        //console.log('create');
         
         levelMusic = this.game.add.audio('levelMusic');
         explosionSound = this.game.add.audio('explosionSound');
@@ -137,7 +136,6 @@ Bomberman.Game.prototype = {
             
     },
     start: function () {
-        //console.log('start');
         
     },
     render: function () {
@@ -171,27 +169,21 @@ Bomberman.Game.prototype = {
         vTileHits = layer.getRayCastTiles(vLine, 1, false, false);
         
         for (var i = 0; i < vTileHits.length; i++) {
-            //vTileHits[i].debug = true;
-            //console.log(vTileHits[i].index + ' x='+ vTileHits[i].x+ ' y='+ vTileHits[i].y);
             if (vTileHits[i].index == 71 || vTileHits[i].index == 9) {
                 var explosion = this.game.add.sprite(vTileHits[i].x * 32, vTileHits[i].y * 32, 'bombExplosion');
                 explosion.events.onAddedToGroup.add(this.killExplosion, this);
                 explosions.add(explosion);
                 this.game.add.tween(explosion).to({ alpha: 0 }, 2000, Phaser.Easing.Linear.None, true);
-                    //explosion.events.onAnimationComplete.add(this.killExplosion, this);
 
             }
             this.destroyTile(vTileHits[i].index, vTileHits[i].x, vTileHits[i].y);
         }
-        
-        //console.log(exp);
-        
+                
         hLine = new Phaser.Line();
         hLine.start.set(bomb.x - 32, bomb.y);
         hLine.end.set(bomb.x + 32, bomb.y);
         hTileHits = layer.getRayCastTiles(hLine, 1, false, false);
         for (var i = 0; i < hTileHits.length; i++) {
-            //hTileHits[i].debug = true;
             if (hTileHits[i].index == 71 || hTileHits[i].index == 9) {
                 var explosion = this.game.add.sprite(hTileHits[i].x * 32, hTileHits[i].y * 32, 'bombExplosion');
                 explosion.events.onAddedToGroup.add(this.killExplosion, this);
@@ -206,19 +198,17 @@ Bomberman.Game.prototype = {
         bombReady = true;
     },
     killExplosion : function (sprite) {
-        //console.log(sprite);
         this.game.time.events.add(800, function () {
             sprite.kill();
         }, this);
     },
     destroyTile: function (index, x, y) {
-        if (index == 9) {//� bloco destrut�vel (9)
-            map.putTile(71, x, y);//substitui pela grama (71)
+        if (index == 9) {           // destructible
+            map.putTile(71, x, y);  //replace with the grass (71)
             this.scorePoints(10);
         }
     },
     killEnemy: function (enemy) {
-        //console.log('inimigo morreu');
         enemy.kill();
         enemies.remove(enemy);
         console.log(enemies.length);
@@ -230,7 +220,6 @@ Bomberman.Game.prototype = {
         }
     },
     killPlayer: function () {
-        //console.log('morreu');
         playerDying = true;
         livesText.text = lives--;
         if (lives <= 0) {
@@ -255,9 +244,8 @@ Bomberman.Game.prototype = {
         bombReady = true;
     },
     addNewScore: function (){
-        //console.log('addNewScore');
         var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/addNewScore/' + score, true);
+        xhr.open('POST', '/addNewScore/' + parseInt(score), true);
         xhr.send();
     }
 }
