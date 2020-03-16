@@ -1,5 +1,6 @@
 ﻿# NodejsBomberman
-Prototype of a Bomberman game developed as part of the gamedev postgraduation course in 2016.
+
+Bomberman prototype using Javascript and Phaser.
 
 # Gameplay video
 
